@@ -21,10 +21,8 @@ public class DropdownTest extends BaseTest{
 		menu.navigateTo(menu.shopLink);
 		ShopPage shop =  new ShopPage(driver);
 		shop.selectByValue("price-desc");
-		assertEquals(shop.getSelectedOption(), "Sort by price: high to low");
-			
+		assertEquals(shop.getSelectedOption(), "Sort by price: high to low");		
 	}
-	
 	
 	@Test(priority =2)
 	public void selectByVisibleTextTest() {

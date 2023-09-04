@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 public class BaseTest {
 	
 	public WebDriver driver;
+	public BasePage app;
 	
 	@BeforeClass
 	public void setup() {
@@ -21,6 +22,7 @@ public class BaseTest {
 		driver.get("https://keybooks.ro/");
 		//driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+		app = new BasePage();
 	}
 	
 	@AfterClass

@@ -15,6 +15,16 @@ public class ContactsPage {
 	}
 	
 	public By nameField = By.cssSelector("input[name='your-name']");
+	public By zoomInButton = By.cssSelector("button[title='Zoom in']");
+	public By zoomOutButton = By.cssSelector("button[title='Zoom out']");
+	public By iframe = By.tagName("iframe");
+
+	
+	public void zoomMap(By locator) {
+		WebElement element =  driver.findElement(iframe);
+		driver.switchTo().frame(element);
+		driver.findElement(locator).click();
+	}
 	
 	
 	public void sendKeysWithCaps(By locator, String textToBeSent) {

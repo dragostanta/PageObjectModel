@@ -28,8 +28,8 @@ public class BaseTest {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(4000);// bad practice
-		//driver.close();	//inchide doar tabul curent
-		driver.quit();// inchide browserul indifiernt cate tab-uri are deschise 
+		driver.close();	//inchide doar tabul curent
+		//driver.quit();// inchide browserul indifiernt cate tab-uri are deschise 
 		
 	}
 	

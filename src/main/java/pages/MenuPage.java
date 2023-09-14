@@ -27,6 +27,7 @@ public class MenuPage {
 	//metode specifice cu locatori sau elementele de mai sus
 	//metode specifice inseamna functionalitate a paginii in care ma aflu
 	public void navigateTo(By locator) {
+		
 		driver.findElement(locator).click();
 	}
 	

@@ -57,8 +57,8 @@ public class JavascriptExecutorExample extends BaseTest{
 		jse.executeScript("arguments[0].click()", app.returnElement(app.menu.searchIcon));
 		*/
 
-		--> Explicam din nou logica lui SeleniumWrappers si logica pentru care am 
-		creat returnElement()
+		//--> Explicam din nou logica lui SeleniumWrappers si logica pentru care am 
+		//creat returnElement()
 		
 		
 	}

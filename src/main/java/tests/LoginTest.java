@@ -27,6 +27,17 @@ public class LoginTest extends BaseTest{
 		LoginPage login =  new LoginPage(driver);
 		login.loginInApp("UserGresit", "12345@67890");
 		assertTrue(login.checkLoginMessageIsDiplayed(login.errorLoginPopup));	
+		login.closePopup();
+	}
+	
+	@Test(priority=3)
+	public void validLoginTest4() {	
+		MenuPage menu = new MenuPage(driver);
+		menu.navigateTo(menu.loginLink);
+		LoginPage login =  new LoginPage(driver);
+		login.loginInApp("TestUser", "12345@67890");
+		assertTrue(login.checkLoginMessageIsDiplayed(login.sucessLoginPopup));
+		login.logoutFromApp();
 	}
 	
 }

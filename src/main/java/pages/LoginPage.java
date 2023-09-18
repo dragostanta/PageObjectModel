@@ -18,10 +18,13 @@ public class LoginPage {
 	public By errorLoginPopup = By.cssSelector("div[class*='sc_infobox_style_error']");
 	public By sucessLoginPopup = By.cssSelector("div[class*='sc_infobox_style_success']");
 	public By logoutButton = By.linkText("Logout");
+	public By closeButton = By.cssSelector("a[class='popup_close']");
 	
 	//metode specifice
 	public void loginInApp(String user, String pass) {
+		driver.findElement(usernameField).clear();
 		driver.findElement(usernameField).sendKeys(user);
+		driver.findElement(passwordField).clear();
 		driver.findElement(passwordField).sendKeys(pass);
 		driver.findElement(submitButton).click();
 	}
@@ -32,6 +35,12 @@ public class LoginPage {
 	
 	public void logoutFromApp() {
 		driver.findElement(logoutButton).click();
+	}
+	
+	
+	public void closePopup() {
+		driver.findElement(closeButton).click();
+
 	}
 	
 }

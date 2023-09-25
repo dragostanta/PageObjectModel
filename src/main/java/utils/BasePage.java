@@ -10,5 +10,6 @@ public class BasePage extends SeleniumWrappers {
 	public ContactsPage contact =  new ContactsPage(driver);
 	public EventsPage events = new EventsPage(driver);
 	public SingleEventPage singleEvent = new SingleEventPage(driver);
+	public HomePage home = new HomePage(driver);
 	
 }

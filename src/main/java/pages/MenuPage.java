@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class MenuPage {
+import utils.SeleniumWrappers;
+
+public class MenuPage extends SeleniumWrappers{
 	
 	public WebDriver driver;
 	
@@ -27,6 +29,7 @@ public class MenuPage {
 	public By searchInput = By.cssSelector("input[class='search_field']");
 	
 	
+
 	//metode specifice cu locatori sau elementele de mai sus
 	//metode specifice inseamna functionalitate a paginii in care ma aflu
 	public void navigateTo(By locator) {
@@ -40,5 +43,14 @@ public class MenuPage {
 		Actions action =  new Actions(driver);
 		action.moveToElement(element).perform();
 	}
+	
+	public void search(String textToSearch) {
+		click(searchIcon);
+		sendKeys(searchInput, textToSearch);
+		click(searchIcon);
+		
+		
+	}
+	
 	
 }

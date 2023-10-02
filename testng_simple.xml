@@ -2,8 +2,8 @@
 <suite name="Suite1" >
     <test name="123" >
         <classes>
-            <class name="tests.DataProviderLoginTest" ></class> 
-            <class name="tests.DataProviderSearchTest" ></class>  
+           <class name="tests.DataProviderLoginTest" ></class>  
+            <class name="tests.DataProviderSearchTest" ></class> 
             <class name="tests.DropdownTest" ></class>                
                           
         </classes>
